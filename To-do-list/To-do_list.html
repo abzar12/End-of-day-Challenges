@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <Link rel="styleSheet" href="to-do.css">
+    <title>To-Do_List, Abzar Camara</title>
+</head>
+
+<body>
+
+    <div class="ac_container">
+        <div class="ac_row">
+            <!-- title -->
+            <H1>JAVASCRIPT TO-DO-List</H1>
+            <!-- the box input -->
+            <div class="ac_form">
+                <form action="">
+                    <Input type="text" placeholder="Add item" id="my_input"></Input>
+                    <button type="button" onclick="add_items() ">Save</button>
+                </form>
+
+            </div>
+            <div class="ac_list">
+                <ul id="ul">
+                    <!-- <li>Items</li>
+                        <li>Items</li>
+                        <li>Items</li> -->
+                </ul>
+            </div>
+        </div>
+    </div>
+    <!-- Now you will add javascript for manipulation -->
+    <script>
+        const text = document.getElementById("my_input");
+        const Listcontainer = document.getElementById("ul")
+        function add_items() {
+
+            if (text.value === "") {
+                alert("Please the field shoud ");
+            } else {
+
+                const li = document.createElement("li");
+                li.textContent = text.value;
+                Listcontainer.appendChild(li);
+
+                console.log(Listcontainer)
+            }
+            text.value = "";
+            saveDate()
+        }
+        function saveDate() {
+            localStorage.setItem("data", Listcontainer.innerHTML);
+        }
+        function showData() {
+            Listcontainer.innerHTML = localStorage.getItem("data");
+        }
+        showData();
+    </script>
+</body>
+
+</html>
