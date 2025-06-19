@@ -18,15 +18,13 @@
             <div class="ac_form">
                 <form action="">
                     <Input type="text" placeholder="Add item" id="my_input"></Input>
-                    <button type="button" onclick="add_items() ">Save</button>
+                    <button type="button" onclick="add_items()">Save</button>
                 </form>
 
             </div>
             <div class="ac_list">
                 <ul id="ul">
-                    <!-- <li>Items</li>
-                        <li>Items</li>
-                        <li>Items</li> -->
+                   
                 </ul>
             </div>
         </div>
@@ -34,21 +32,21 @@
     <!-- Now you will add javascript for manipulation -->
     <script>
         const text = document.getElementById("my_input");
-        const Listcontainer = document.getElementById("ul")
+        const Listcontainer = document.getElementById("ul");
         function add_items() {
-
             if (text.value === "") {
                 alert("Please Add a task");
             } else {
 
                 const li = document.createElement("li");
                 li.textContent = text.value;
+               
                 Listcontainer.appendChild(li);
 
                 console.log(Listcontainer)
             }
             text.value = "";
-            saveDate()
+            saveDate();
         }
         function saveDate() {
             localStorage.setItem("data", Listcontainer.innerHTML);
@@ -57,6 +55,18 @@
             Listcontainer.innerHTML = localStorage.getItem("data");
         }
         showData();
+
+        Listcontainer.addEventListener('click', function(e){
+            if(e.target.tagName === "LI"){
+                e.target.classList.toggle("active");
+                saveDate();
+            }else if(e.target.tagName === "SPAN"){
+                e.target.parentElement.remove();
+                saveDate();
+            }
+        })
+        
+
     </script>
 </body>
 

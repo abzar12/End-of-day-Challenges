@@ -18,7 +18,7 @@ h1{
 }
 .ac_row{
     background-color: white;
-    height: 300px;
+    height: auto;
     width: 500px;
 }
 .ac_form input{
@@ -53,22 +53,44 @@ h1{
     cursor: pointer;
     
 }
+
 .ac_list ul {
     list-style: none;
     text-align: left;
     margin: 10px 20px;
 }
-/* .ac_list ul li{
-    margin-bottom: 10px;
+.ac_list ul li{
+    margin-left: 20px;
+    padding-left: 20px;
+     margin-bottom: 10px;
+     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+     cursor: pointer;
+
+}
+.ac_list ul li span{
+    position: relative;
+    margin-left: 50px;
 }
 .ac_list ul li::before{
-  content: "";
-  position: absolute;
-  width: 20px;
-  height: 20px;
-  border: 1px solid #555;
-  border-radius: 50px; optional for rounded corners
-  background-color: white; 
-  margin-left: -30px;
+    content: "";
+    position: absolute;
+    height: 15px;
+    width: 15px;
+    border: 1px solid rgb(36, 233, 177);
+    border-radius: 50px;
+     margin-left: -30px;
+    margin-top: 3px;
+}
+.ac_list ul li.active::before{
+    content: "";
+    position: absolute;
+    height: 15px;
+    width: 15px;
+    border: 1px solid rgb(36, 233, 177);;
+    background-color: rgb(36, 233, 177);
+    border-radius: 50px;
+    margin-left: -30px;
+    margin-top: 3px;
+}
 
-*/
+
