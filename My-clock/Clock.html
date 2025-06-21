@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My-Time | Abzar Camara</title>
+
+</head>
+
+
+<body>
+    <div class="">
+        <h1>CLOCK</h1>
+        <div id="div" style="text-align: center; font-size: 35px;"> 00:00:00</div>
+        <button type="button" onclick="startChrono()">Start</button>
+
+    </div>
+    <script>
+        let second = 0;
+        let minute = 0;
+        let hours = 0;
+        let intervalId = null
+
+        function startChrono(){
+            if(!intervalId){
+               intervalId = setInterval(() => {
+                second++;
+
+                if (second === 60) {
+                    second = 0;
+                    minute++
+
+                    if (minute === 60) {
+                         minute = 0;
+                        hours++;
+                    }
+                }
+                startChrono();
+            }, 1000);
+            }
+            document.querySelector("#div").innerHTML = `${String(hours).padStart(2, "0")}:${String(minute).padStart(2, "0")}:${String(second).padStart(2, "0")}`
+        }
+
+    </script>
+</body>
+
+</html>
