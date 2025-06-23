@@ -10,36 +10,50 @@
 
 
 <body>
-    <div class="">
-        <h1>CLOCK</h1>
-        <div id="div" style="text-align: center; font-size: 35px;"> 00:00:00</div>
-        <button type="button" onclick="startChrono()">Start</button>
+    <div class="" style="text-align: center;  padding-top: 100px;">
+        <h1 style="text-align: center; font-size: 35px; color: rgb(4, 67, 169);">Abouzari-CLOCK</h1>
+        <div id="div" style="text-align: center; font-size: 35px; margin: 30px auto;"> 00:00:00</div>
+        <div >
+            <button type="button" style="width: 100px; height: 40px; border-color: gray; cursor: pointer; border-radius: 10px; margin-right: 20px; background-color: rgb(5, 80, 202); color: white; font-size: 18px;" onclick="startChrono()">Start</button>
+            <button type="button" style="width: 100px; height: 40px; border-color: rgb(4, 67, 169); cursor: pointer; border-radius: 10px; margin-right: 20px; background-color: rgb(4, 67, 169); color: white; font-size: 18px;" onclick="PauseChrono()"> Stop</button>
+            <button type="button" style="width: 100px; height: 40px; border-color: rgb(4, 67, 169); cursor: pointer; border-radius: 10px; background-color: rgb(4, 67, 169); color: white; font-size: 18px;" onclick="ClearChrono()">Reset</button>
+        </div>
+
 
     </div>
     <script>
-        let second = 0;
-        let minute = 0;
-        let hours = 0;
-        let intervalId = null
-
-        function startChrono(){
-            if(!intervalId){
-               intervalId = setInterval(() => {
-                second++;
-
-                if (second === 60) {
-                    second = 0;
-                    minute++
-
-                    if (minute === 60) {
-                         minute = 0;
-                        hours++;
+        let Hours = 0;
+        let Minutes = 0;
+        let Seconds = 0;
+        let intervalId = null;
+        function startChrono() {
+            if (!intervalId) {
+                intervalId = setInterval(() => {
+                    Seconds++;
+                    if (Seconds === 60) {
+                        Minutes++
+                        Seconds = 0;
                     }
-                }
-                startChrono();
-            }, 1000);
+                    if (Minutes === 60) {
+                        Hours++
+                        Minutes = 0;
+                    }
+                    document.querySelector("#div").textContent = `${String(Hours).padStart(2, "0")}:${String(Minutes).padStart(2, "0")}:${String(Seconds).padStart(2, "0")}`;
+                }, 1000)
             }
-            document.querySelector("#div").innerHTML = `${String(hours).padStart(2, "0")}:${String(minute).padStart(2, "0")}:${String(second).padStart(2, "0")}`
+        }
+        function PauseChrono() {
+            clearInterval(intervalId);
+            intervalId = null;
+
+        }
+        function ClearChrono() {
+            clearInterval(intervalId);
+            intervalId = null;
+            Seconds = 0;
+            Minutes = 0;
+            Hours = 0;
+            document.querySelector("#div").textContent = `${String(Hours).padStart(2, "0")}:${String(Minutes).padStart(2, "0")}:${String(Seconds).padStart(2, "0")}`;
         }
 
     </script>
