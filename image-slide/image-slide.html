@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <section>
+        <div class="ac_img" style="text-align: center;">
+            <h1  style="text-align: center; font-size: 35px; color: rgb(4, 67, 169);">Abouzari_Image-Slide</h1>
+            <img src="1.jpg" id="img" alt="Image_slide"
+                style="background-repeat: no-repeat; background-size: cover; background-position: center center; height: 450px; width: 800px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5); border-radius: 15px;">
+            <div class="button" style="text-align: center;">
+                <button type="button" id="Prev_button" onclick="Prev_Img()" style=" width: 100px; height:35px; margin: 20px 15px; border-radius: 50px; background-color: rgb(7, 128, 198); text-decoration: none; color: white; font-size: 18px; ">Back</button>
+                <button type="button" id="Prev_button" onclick="Next_Img()" style=" width: 100px; height:35px; margin: 20px 15px; border-radius: 50px; background-color: rgb(7, 128, 198); text-decoration: none; color: white; font-size: 18px; ">Next</button>
+            </div>
+
+        </div>
+    </section>
+    <!-- jvascript code -->
+
+    <script>
+
+        const picture = ["1.jpg", "2.jpg", "3.jpg", "4.jpg"]
+        let pic = 0;
+        let pictureLength = picture.length - 1;
+        const Prev_button = document.getElementById("Prev_button");
+        const Next_button = document.getElementById("next_button");
+
+        function Prev_Img() {
+            if (document.images && pic > 0) {
+                pic--;
+                let Img = document.getElementsByName("img");
+                img.src = picture[pic];
+            }
+        }
+        function Next_Img() {
+            if (document.images && pic < pictureLength) {
+                pic++
+                let Img = document.getElementById("img");
+                img.src = picture[pic];
+            }
+        }
+    </script>
+</body>
+
+</html>
