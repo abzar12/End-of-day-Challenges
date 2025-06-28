@@ -36,22 +36,24 @@ document.addEventListener(("DOMContentLoaded"), () => {
             lastName.style.border = "3px solid red";
             checkError = true;
         }
-        // check the number input ;
+        // check the number input 
         if (!NumberPattern.test(number.value.trim())) {
             number.style.border = "3px solid red";
             checkError = true;
         }
+        // check email's value
         if (!EmailPattern.test(email.value.trim())) {
             email.style.border = "3px solid red";
             checkError = true;
         }
+         // check password's value
         if (!PasswordPattern.test(password.value.trim())) {
             password.style.border = "3px solid red";
             checkError = true;
         }
         if(!checkError){
             form.submit();
-            alert("Form is valided")
+            alert("Form is valided");
         }
 
 
