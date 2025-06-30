@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="root"></div>
+    <script>
+        let root = document.getElementById('root');
+        function Students(FirstName, LastName, Classroom, Level ){
+            this.FirstName = FirstName,
+            this.LastName = LastName,
+            this.Classroom = Classroom,
+            this.Level = Level
+            this.getInfo = function(){
+                return `My Name is ${FirstName} ${LastName}, I'm doing Level ${Level} in Class ${Classroom}`;
+            }
+        }
+        // student one
+        const student1 = new Students('Moussa', 'Touré', 'A', 1);
+        const p =document.createElement('p')
+        p.textContent = student1.getInfo();
+        root.appendChild(p);
+        // student 2
+        const student2 = new Students('Mahamoud', 'Camara', 'B', 2);
+        const p1 = document.createElement('p');
+            p1.textContent = student2.getInfo();
+            root.appendChild(p1);
+            //student three
+        const student3 = new Students('Ibrahim', 'Fofana', 'B', 4);
+        const p2 = document.createElement('p');
+        p2.textContent = student3.getInfo();
+        root.appendChild(p2);
+        //student four
+        const student4 = new Students('Mamane', 'Diallo', 'C', 2);
+        const p4 = document.createElement('p');
+        p4.textContent = student4.getInfo();
+        root.appendChild(p4);
+
+        // creatting a h1 within another div
+        const div = document.createElement('div'); // create a div
+        const H1 = document.createElement('h1'); //create a headding
+        H1.textContent = 'FILTER BY NAME'; // write inside a headding (h1)
+        div.appendChild(H1) ; // appending h1 to div
+         // appending div to root which is a div also 
+         root.appendChild(div);
+
+         const TableStudent = [student1, student2, student3, student4];
+         
+         const filter = TableStudent.filter(ele => ele.Level == 2);
+         const Filter = Object.fromEntries(filter.map(ele => [ele.FirstName, ele]));
+         for (const key in Filter){``
+            const studen = Filter[key];
+            const p5 = document.createElement('p');
+            p5.textContent = studen.getInfo();
+
+            root.appendChild(p5);
+         } 
+    
+        
+
+
+    </script>
+</body>
+</html>
