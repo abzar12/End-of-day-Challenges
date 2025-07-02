@@ -48,7 +48,7 @@
                     <audio data-key="85" src="./sounds/12.wav"></audio>
                     <audio data-key="90" src="./sounds/13.wav"></audio>
                     <audio data-key="95" src="./sounds/14.wav"></audio>
-                    <audio data-key="80" src="./sounds/15.wav"></audio>
+                    <audio data-key="99" src="./sounds/15.wav"></audio>
 
 
 
@@ -58,22 +58,23 @@
     </section>
     <script>
         document.addEventListener('DOMContentLoaded', () => {
-            document.addEventListener('keydown', (event) => {
-                const pressKey = event.key.toUpperCase();
+            document.addEventListener('keydown', (e) => {
+                const presskey = e.key.toUpperCase();
 
-                document.querySelectorAll('.key').forEach(keyele => {
-                    if (keyele.textContent.trim().startsWith(pressKey)) {
-                        keyele.classList.add('active');
-                        const audio = document.querySelector(`audio[data-key = "${keyele.dataset.key}"]`);
-                        audio.play();
-                        if(!audio) return;
-                        audio.currentTime = 0;
-
-                    }
-                    setInterval(() => {
-                        keyele.classList.remove('active')
-                    }, 200)
+                document.querySelectorAll('.key').forEach( (ele) =>{
+                        if(ele.textContent.trim().startsWith(presskey)){
+                            ele.classList.add('active');
+                           const audio =  document.querySelector(`audio[data-key = '${ele.dataset.key}']`)
+                           audio.play();
+                           audio.currentTime = 0
+                           if(!audio) return
+                           setInterval(() =>{
+                            ele.classList.remove('active');
+                           },300)
+                    };
+                    
                 })
+
             })
         });
 

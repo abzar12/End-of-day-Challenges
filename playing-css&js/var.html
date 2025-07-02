@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .ac_container{
+            display: inline;
+        }
+        .image{
+            height: 350px;
+            width: 500px;
+            margin-inline: auto;
+            margin-top: 50px;
+        }
+        .image img{
+            height: 100%;
+            width: 500px;
+            margin-inline: auto;
+            padding: var(--size);
+            filter: blur(var(--blur));
+            background-color:var(--color);
+        }
+        :root{
+            --size: 150px;
+            --blur: 10px;
+            --color: #0755ae;
+        }
+
+    </style>
+</head>
+<body>
+    <main>
+        <div class="ac_container">
+            <label for="">Size</label>
+            <input type="range" value="5" name="Size" id="size" data-sizing="px" min="0px" max="200">
+            <label for="">blur</label>
+            <input type="range" value="10" name="blur" id="blur" data-sizing="px" min="0" max="100">
+            <label for="">Color</label>
+            <input type="color" name="ac-color" name="color" id="color" id="" data-colo="#f8f0f0" value="#f8f0f0">
+            <div class="image">
+                <img src="../image-slide/2.jpg" alt="insideImageSlide">
+            </div>
+            
+        </div>
+    </main>
+    <script>
+        const inputs = document.querySelectorAll('input');
+        
+        function handleimg(){
+            const suffix = this.dataset.sizing || '';
+            console.log(this.dataset);
+        }
+        inputs.forEach(ele => ele.addEventListener('change', handleimg))
+        inputs.forEach(ele => ele.addEventListener('mousmove', handleimg));
+
+    </script>
+</body>
+</html>
