@@ -23,8 +23,8 @@
             background-color:var(--color);
         }
         :root{
-            --size: 150px;
-            --blur: 10px;
+            --size: 10px;
+            --blur: 5px;
             --color: #0755ae;
         }
 
@@ -34,11 +34,11 @@
     <main>
         <div class="ac_container">
             <label for="">Size</label>
-            <input type="range" value="5" name="Size" id="size" data-sizing="px" min="0px" max="200">
+            <input type="range" value="5" name="size" id="size" data-sizing="px" min="0" max="200">
             <label for="">blur</label>
-            <input type="range" value="10" name="blur" id="blur" data-sizing="px" min="0" max="100">
+            <input type="range" value="10" name="blur" id="blur" data-sizing="px" min="0" max="200">
             <label for="">Color</label>
-            <input type="color" name="ac-color" name="color" id="color" id="" data-colo="#f8f0f0" value="#f8f0f0">
+            <input type="color" name="color" name="color" id="color" id="" data-colo="#f8f0f0" value="#f8f0f0">
             <div class="image">
                 <img src="../image-slide/2.jpg" alt="insideImageSlide">
             </div>
@@ -50,10 +50,10 @@
         
         function handleimg(){
             const suffix = this.dataset.sizing || '';
-            console.log(this.dataset);
+            document.documentElement.style.setProperty(`--${this.name}`, this.value + suffix)
         }
         inputs.forEach(ele => ele.addEventListener('change', handleimg))
-        inputs.forEach(ele => ele.addEventListener('mousmove', handleimg));
+        inputs.forEach(ele => ele.addEventListener('mousemove', handleimg));
 
     </script>
 </body>
