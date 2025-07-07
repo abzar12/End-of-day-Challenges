@@ -1,9 +1,9 @@
 
 
 
-document.addEventListener(("DOMContentLoaded"), () => {
-    const form = document.getElementById("form");
-    form.addEventListener(("submit"), (e) => {
+//document.addEventListener(("DOMContentLoaded"), () => {
+    const form = document.getElementById("form1");
+    form.addEventListener('submit', (e) => {
         // stop form submission 
         e.preventDefault();
         // getting access the input
@@ -16,17 +16,18 @@ document.addEventListener(("DOMContentLoaded"), () => {
         // all my pattern to check the input
         let TextPattern = /^[a-zA-Z0-9.+_-]{2,}$/; //for text
         let NumberPattern = /^\d{8,}$/; // for number
-        let EmailPattern = /^[a-zA-Z0-9.+_-%]+@[a-zA-Z0-9_+-]{2,}\.[a-zA-Z]{2,}$/; // for Email
-        let PasswordPattern = /^(?=.*[a-z])(?=.+[A-Z])(?=.*[\d])(?=.+[*%-+_@])[a-zA-Z0-9_+.-%@]{8,}$/ //for password
+        let EmailPattern = /^[a-zA-Z0-9+_-]+@[a-zA-Z0-9_+-]{2,}\.[a-zA-Z]{2,}$/; // for Email
+        let PasswordPattern = /^(?=.*[a-z])(?=.*[A-Z])(?=.*[\d])(?=.*[*-+_@#])[a-zA-Z0-9_+.-@]{8,}$/ //for password
 
         firstName.style.border = "";
         lastName.style.border = "";
         number.style.border = "";
         email.style.border = "";
         password.style.border = "";
-        //check  firsName's input
+        
         let checkError = false;
-
+        
+        //check  firsName's input
         if (!TextPattern.test(firstName.value.trim())) {
             firstName.style.border = "3px solid red"
             checkError = true;
@@ -46,16 +47,16 @@ document.addEventListener(("DOMContentLoaded"), () => {
             email.style.border = "3px solid red";
             checkError = true;
         }
-         // check password's value
+        // check password's value
         if (!PasswordPattern.test(password.value.trim())) {
             password.style.border = "3px solid red";
             checkError = true;
         }
-        if(!checkError){
+        if (!checkError) {
             form.submit();
             alert("Form is valided");
         }
 
 
     })
-})
+//})

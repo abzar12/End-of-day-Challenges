@@ -67,7 +67,7 @@
                            const audio =  document.querySelector(`audio[data-key = '${ele.dataset.key}']`)
                            audio.play();
                            audio.currentTime = 0
-                           if(!audio) return
+                           if(!audio) return ;
                            setInterval(() =>{
                             ele.classList.remove('active');
                            },300)
