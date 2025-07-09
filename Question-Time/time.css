@@ -1,0 +1,58 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-size: 1.2rem;
+}
+.ac-question{
+    width: 100%;
+    margin-top: 50px;
+    position: relative;
+}
+.tasks{
+    width: 600px;
+    background-color: rgb(175, 175, 175);
+    margin-inline: auto;
+    border-radius: 10px;
+    padding: 10px;
+    min-height: 100px;
+    text-align: center;
+    margin-top: 10px;
+}
+.time{
+    position: absolute;
+    top: 70px;
+    left: 50px;
+    border: 1px solid rgb(199, 199, 199);
+    background-color: rgb(199, 199, 199);
+    padding: 10px;
+    border-radius: 50%;
+    font-size: 3rem;
+}
+.ac-form{
+    width: 600px;
+    margin-inline: auto;
+    text-align: center;
+    margin-top: 200px;
+}
+input{
+    padding-left: 5px;
+    width: 300px;
+    margin-bottom: 10px;
+    border-radius: 10px;
+    height: 40px;
+    border: none;
+    box-shadow: 1px 1px 10px gray;
+}
+button{
+    width: 100px;
+    height: 35px;
+    background-color: transparent;
+    border-radius: 15px;
+    transition: 0.4s ease-in-out;
+}
+button:hover{
+    background-color: rgb(199, 199, 199);
+    color: white;
+    transform: scale(1.1);
+
+}
