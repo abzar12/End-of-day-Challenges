@@ -23,30 +23,63 @@ const items = [
     { Id: 20, Question: "What is JavaScript used for?", Reponse: "To make web pages interactive." },
     { Id: 21, Question: "Which tag is used to insert an image in HTML?", Reponse: "<img>" }
 ]
-const TimeC = document.querySelector('.time');
-const ShowText = document.querySelector('#question');
-let Time = 10  // initiate the time
-//  document.getElementById('question').innerHTML = items.Question;
-let id = 1;
-setInterval(() => {
-    Time--
-    document.querySelector('.time').innerHTML = `${String(Time).padStart(2, "0")}` ;
-    if(Time === 0){
-        Time = 15;
-    }
-}, 1000)
-setInterval(() => {
-    id++
-    const ItemsFound = items.find(item => item.Id === id)
-    if (ItemsFound) {
-        document.getElementById('question').innerHTML = ItemsFound.Question;
-        document.getElementById('answer').innerHTML = ""
-        setTimeout(() => {
-            document.getElementById('answer').innerHTML = ItemsFound.Reponse;
+id = 0;
+TimeC = 15;
+SetInterval = null;
+if (setInterval !== null) {
+    setInterval(() => {
+        id++
+        const ItemsFound = items.find( item => item.Id === id);
+        if (ItemsFound){
+            const ele = document.getElementById('question').innerHTML = ItemsFound.Question;
+            console.log(ele);
+        };
+        setTimeout(()=>{
+             document.getElementById('answer').innerHTML = ItemsFound.Reponse;
         }, 10000)
-        if(id === 21){
-            id= 1;
-        }
+        document.getElementById('answer').innerHTML = "";
 
+    }, 15000)
+    setInterval(() =>{
+        TimeC--;
+        if(TimeC <= "5"){
+             document.querySelector(".time").innerHTML =`${String(TimeC).padStart(2, "0")}`;
+             if (TimeC === 0){
+        TimeC = 15;
+        }
     }
-}, 15000);
+    }, 1000)
+    
+}
+
+
+// --------------------- Function------------------------
+// const TimeC = document.querySelector('.time');
+// const ShowText = document.querySelector('#question');
+// let Time = 10  // initiate the time
+//  document.getElementById('question').innerHTML = items.Question;
+// let id = 0;
+// setInterval(() => {
+//     Time--
+//     if(Time <= 10){
+//     document.querySelector('.time').innerHTML = `${String(Time).padStart(2, "0")}` ;
+//     if(Time === 0){
+//         Time = 15;
+//     };
+// }
+// }, 1000)
+// setInterval(() => {
+//     id++
+//     const ItemsFound = items.find(item => item.Id === id)
+//     if (ItemsFound) {
+//         document.getElementById('question').innerHTML = ItemsFound.Question;
+//         document.getElementById('answer').innerHTML = ""
+//         setTimeout(() => {
+//             document.getElementById('answer').innerHTML = ItemsFound.Reponse;
+//         }, 10000)
+//         if(id === 21){
+//             id= 1;
+//         }
+
+//     }
+// }, 15000);
