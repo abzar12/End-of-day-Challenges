@@ -5,7 +5,9 @@
     font-size: 1.1rem;
 
 }
-
+:root{
+    --width: 160px;
+}
 body {
     background-color: rgb(0, 12, 39);
     color: white;
@@ -38,9 +40,8 @@ body {
     content: "";
     position: absolute;
     background-color: rgb(4, 197, 4);
-    width: 160px
+    width: var(--width);
         /*340px, 480px */
-    ;
     height: 5px;
 }
 
@@ -125,13 +126,8 @@ h3 {
     justify-content: space-between;
     margin:15px 0px;
 }
-.ac-buttonBack{
-    text-align: left;
-    margin:15px 0px;
-}
- .ac-button button, .ac-buttonBack button, .ac-buttonBoth button{
-    padding: 5px;
-    width: 70px;
+ .ac-button button, .ac-buttonBoth button{
+    padding: 5px 10px;
     background-color: transparent;
     border: 1px solid rgb(0, 71, 0); 
     color: rgba(255, 255, 255, 0.53);
@@ -139,7 +135,7 @@ h3 {
     cursor: pointer;
     transition: 0.6s ease;
 }
-.ac-button button:hover, .ac-buttonBack button:hover, .ac-buttonBoth button:hover{
+.ac-button button:hover, .ac-buttonBoth button:hover{
     border-color: rgb(4, 197, 4);
     color: white;
 }
