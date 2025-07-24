@@ -16,13 +16,13 @@
                     <div class="septhead active">1 Basic Information</div>
                     <div class="septhead">2 About the Website</div>
                     <div class="septhead">3 Design & Style</div>
-                    <div class="range"></div>
+                    <div class="range" ></div>
                 </div>
                 <form action="" method="post">
                     <!-- -------------------------setp 1 is started here ------------------------- -->
-                    <div class="ac-step active">
+                    <div class="ac-step" id="ac-form-step1">
                         <h1>Basic Information</h1>
-                        <div class=" ac-form-step1 ">
+                        <div class="ac-form-step1">
                             <div class="" style="position: relative;">
                                 <label for="fullname" class="animation">Full Name</label>
                                 <input type="text" id="fullname" name="fullname" placeholder="Full Name" required>
@@ -52,14 +52,14 @@
                                 </div>
                             </div>
                             <div class="ac-button">
-                                <button type="button" onclick="Nextpage()">Next</button>
+                                <button type="button" id="Nextbutton">Next</button>
                             </div>
                         </div>
                     </div>
                     <!-- -------------------------setp 2 is started here ------------------------- -->
-                    <div class="ac-step ">
+                    <div class="ac-step " id="ac-form-step2">
                         <h2>About the Website</h2>
-                        <div class="">
+                        <div class="ac-form-step1">
                             <div class="" style="position: relative;">
                                 <label for="WebsiteGoal" class="animation">What is the main goal of the website
                                     ?</label>
@@ -124,13 +124,13 @@
                                     style="resize: vertical;"></textarea>
                             </div>
                                 <div class="ac-buttonBoth">
-                                    <button type="button" onclick="Prevpage()">Back</button>
-                                    <button type="button" onclick="Nextpage()">Next</button>
+                                    <button type="button" id="Prevbutton" >Back</button>
+                                    <button type="button" id="Nextbutton">Next</button>
                                 </div>
                         </div>
                     </div>
                     <!-- -------------------------setp 3 is started here ------------------------- -->
-                    <div class="ac-step">
+                    <div class="ac-step " id="ac-form-step3">
                         <h3>Design & Style</h3>
                         <div class="ac-form-step1">
                             <div class="1" style="position: relative;">
@@ -166,8 +166,9 @@
                                     <label for="">Not sure yet</label>
                                 </div>
                                 <div class="">
-                                <div class="ac-buttonBack">
-                                    <button type="button" onclick="Nextpage()">Back</button>
+                                <div class="ac-buttonBoth">
+                                   <button type="button" id="Prevbutton">Back</button>
+                                   <button type="submit">Subscrire</button>
                                 </div>
                             </div>
                             </div>
@@ -177,6 +178,7 @@
             </div>
         </section>
     </main>
+    <script src="contactFrom.js" defer ></script>
 </body>
 
 </html>
