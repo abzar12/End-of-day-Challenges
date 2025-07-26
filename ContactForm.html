@@ -13,32 +13,31 @@
         <section>
             <div class="container">
                 <div class="ac-head">
-                    <div class="septhead active">1 Basic Information</div>
+                    <div class="septhead">1 Basic Information</div>
                     <div class="septhead">2 About the Website</div>
                     <div class="septhead">3 Design & Style</div>
-                    <div class="range" ></div>
+                    <div class="range"></div>
                 </div>
-                <form action="" method="post">
+                <form action="" method="post" id="ac_form">
                     <!-- -------------------------setp 1 is started here ------------------------- -->
                     <div class="ac-step" id="ac-form-step1">
                         <h1>Basic Information</h1>
                         <div class="ac-form-step1">
                             <div class="" style="position: relative;">
                                 <label for="fullname" class="animation">Full Name</label>
-                                <input type="text" id="fullname" name="fullname" placeholder="Full Name" required>
+                                <input type="text" id="fullname" name="fullname" placeholder="Full Name">
                             </div>
                             <div class="" style="position: relative;">
                                 <label for="email" class="animation">Email </label>
-                                <input id="email" name="email" type="email" placeholder="abouzari@gmail.com" required>
+                                <input id="email" name="email" type="email" placeholder="abouzari@gmail.com">
                             </div>
                             <div class="" style="position: relative;">
                                 <label for="business" class="animation">Business /Organization Name </label>
-                                <input type="text" id="business" name="business" placeholder="Your Organization Name"
-                                    required>
+                                <input type="text" id="business" name="business" placeholder="Your Organization Name">
                             </div>
                             <div class="" style="position: relative;">
                                 <label for="phone" class="animation">Phone Number </label>
-                                <input id="phone" name="phone" type="text" placeholder="+223 91716839" required>
+                                <input id="phone" name="phone" type="text" placeholder="+223 91716839">
                             </div>
                             <div class="" style="position: relative;">
                                 <label for="contact" class="animation">Preferred way to contact you?</label>
@@ -120,13 +119,13 @@
                             <div class="" style="position: relative;">
                                 <label for="describe" class="animation">Describe your business in 2&ndash;3 sentences
                                 </label>
-                                <textarea name="DescritionWebsite" id="describe" cols="30" rows="5"
-                                    style="resize: vertical;"></textarea>
+                                <textarea name="DescritionWebsite" id="describe" cols="30" rows="5" style="resize: vertical;"></textarea>
                             </div>
-                                <div class="ac-buttonBoth">
-                                    <button type="button" id="Prevbutton" >Back</button>
-                                    <button type="button" id="Nextbutton">Next</button>
-                                </div>
+                            <div class="ac-buttonBoth">
+                                <button type="button" id="Prevbutton">Back</button>
+                                <button type="button" id="Nextbutton">Next</button>
+                            </div>
+                            <p id="error" style="color: red; text-align: center;"></p>
                         </div>
                     </div>
                     <!-- -------------------------setp 3 is started here ------------------------- -->
@@ -137,7 +136,7 @@
                                 <label for="" class="animation">Do you have websites you like ? <span
                                         style="font-size: small;">Please
                                         share links</span> </label>
-                                <input type="text" placeholder="Share link" name="Website_link">
+                                <input type="text" placeholder="Share link" name="Website_link" id="websiteLink">
                             </div>
                             <div class="" style="position: relative;">
                                 <label for="time" class="animation">When would you like the website to be ready?</label>
@@ -166,11 +165,11 @@
                                     <label for="">Not sure yet</label>
                                 </div>
                                 <div class="">
-                                <div class="ac-buttonBoth">
-                                   <button type="button" id="Prevbutton">Back</button>
-                                   <button type="submit">Subscrire</button>
+                                    <div class="ac-buttonBoth">
+                                        <button type="button" id="Prevbutton">Back</button>
+                                        <button type="submit" id="submit">Subscrire</button>
+                                    </div>
                                 </div>
-                            </div>
                             </div>
                         </div>
                     </div>
@@ -178,7 +177,7 @@
             </div>
         </section>
     </main>
-    <script src="contactFrom.js" defer ></script>
+    <script src="contactFrom.js" defer></script>
 </body>
 
 </html>
