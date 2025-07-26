@@ -23,7 +23,7 @@ body {
     position: relative;
 }
 
-.container .ac-head .active {
+.container .ac-head .septhead.active {
     color: rgb(4, 197, 4);
 }
 
