@@ -5,9 +5,11 @@
     font-size: 1.1rem;
 
 }
-:root{
+
+:root {
     --width: 160px;
 }
+
 body {
     background-color: rgb(0, 12, 39);
     color: white;
@@ -41,7 +43,7 @@ body {
     position: absolute;
     background-color: rgb(4, 197, 4);
     width: var(--width);
-        /*340px, 480px */
+    /*340px, 480px */
     height: 5px;
 }
 
@@ -90,17 +92,18 @@ h3 {
     border: 3px solid transparent;
     font-size: 1rem;
 }
-.ac-step textarea{
-     padding: 7Px 15px;
+
+.ac-step textarea {
+    padding: 7Px 15px;
     margin-left: 20px;
     border-radius: 5px;
     outline: none;
     border: 3px solid transparent;
-     font-size: 1rem;
+    font-size: 1rem;
 }
 
 .ac-step input:focus {
-    border-color:rgb(4, 197, 4);
+    border-color: rgb(4, 197, 4);
 }
 
 .ac-step .special label {
@@ -110,43 +113,51 @@ h3 {
 
 .ac-step .special input[type="radio"] {
     width: auto;
-   accent-color: rgb(4, 197, 4);
-}
-.ac-step .special input[type="checkbox"] {
-    width: auto;
-   accent-color: rgb(4, 197, 4);
+    accent-color: rgb(4, 197, 4);
 }
 
- .ac-button{
+.ac-step .special input[type="checkbox"] {
+    width: auto;
+    accent-color: rgb(4, 197, 4);
+}
+
+.ac-button {
     text-align: right;
     margin: 10px;
 }
+
 .ac-buttonBoth {
     display: flex;
     justify-content: space-between;
-    margin:15px 0px;
+    margin: 15px 0px;
 }
- .ac-button button, .ac-buttonBoth button{
+
+.ac-button button,
+.ac-buttonBoth button {
     padding: 5px 10px;
     background-color: transparent;
-    border: 1px solid rgb(0, 71, 0); 
+    border: 1px solid rgb(0, 71, 0);
     color: rgba(255, 255, 255, 0.53);
     border-radius: 7px;
     cursor: pointer;
     transition: 0.6s ease;
 }
-.ac-button button:hover, .ac-buttonBoth button:hover{
+
+.ac-button button:hover,
+.ac-buttonBoth button:hover {
     border-color: rgb(4, 197, 4);
     color: white;
 }
 
-.special label{
+.special label {
     font-size: 1rem;
     color: rgba(255, 255, 255, 0.747);
 }
-.ac-form-step2 .special input{
+
+.ac-form-step2 .special input {
     margin-left: 10px;
 }
+
 .ac-step .animation::before {
     content: "";
     position: absolute;
@@ -157,4 +168,3 @@ h3 {
     top: 10px;
     border-radius: 1px;
 }
-
