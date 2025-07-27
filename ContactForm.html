@@ -18,7 +18,7 @@
                     <div class="septhead">3 Design & Style</div>
                     <div class="range"></div>
                 </div>
-                <form action="" method="post" id="ac_form">
+                <form action="contactForm.php" method="post" id="ac_form">
                     <!-- -------------------------setp 1 is started here ------------------------- -->
                     <div class="ac-step" id="ac-form-step1">
                         <h1>Basic Information</h1>
@@ -63,15 +63,16 @@
                                 <label for="WebsiteGoal" class="animation">What is the main goal of the website
                                     ?</label>
                                 <div class="special">
-                                    <input type="checkbox" name="business" id="WebsiteGoal" value="Business ">
+                                    <input type="checkbox" name="business" id="typeOfBusiness" value="Business ">
                                     <label for="">Business Informational <small>(present my business)</small></label>
                                     <br>
-                                    <input type="checkbox" name="e-commerce" id="WebsiteGoal" value="E-commerce">
+                                    <input type="checkbox" name="e-commerce" id="typeOfBusiness" value="E-commerce">
                                     <label for="">E-commerce Sell products online
                                         <small>(e-commerce)</small></label><br>
-                                    <input type="checkbox" name="portfolio" id="WebsiteGoal" value="Portfolio">
+                                    <input type="checkbox" name="portfolio" id="typeOfBusiness"
+                                        value="Portfolio Or Gallery">
                                     <label for="">Portfolio or gallery</label><br>
-                                    <input type="checkbox" name="others" id="WebsiteGoal" value="Others:">
+                                    <input type="checkbox" name="others" id="typeOfBusiness" value="Others:">
                                     <label for="">Others</label>
                                 </div>
                             </div>
@@ -119,7 +120,8 @@
                             <div class="" style="position: relative;">
                                 <label for="describe" class="animation">Describe your business in 2&ndash;3 sentences
                                 </label>
-                                <textarea name="DescritionWebsite" id="describe" cols="30" rows="5" style="resize: vertical;"></textarea>
+                                <textarea name="DescritionWebsite" id="describe" cols="30" rows="5"
+                                    style="resize: vertical;"></textarea>
                             </div>
                             <div class="ac-buttonBoth">
                                 <button type="button" id="Prevbutton">Back</button>
@@ -136,7 +138,7 @@
                                 <label for="" class="animation">Do you have websites you like ? <span
                                         style="font-size: small;">Please
                                         share links</span> </label>
-                                <input type="text" placeholder="Share link" name="Website_link" id="websiteLink">
+                                <input type="text" placeholder="Share link" name="Websitelink" id="websiteLink">
                             </div>
                             <div class="" style="position: relative;">
                                 <label for="time" class="animation">When would you like the website to be ready?</label>
@@ -167,7 +169,7 @@
                                 <div class="">
                                     <div class="ac-buttonBoth">
                                         <button type="button" id="Prevbutton">Back</button>
-                                        <button type="submit" id="submit">Subscrire</button>
+                                        <button type="submit" name="submit">Subscrire</button>
                                     </div>
                                 </div>
                             </div>
