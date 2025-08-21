@@ -27,30 +27,30 @@ id = 0;
 TimeC = 15;
 SetInterval = null;
 if (setInterval !== null) {
-    setInterval(() => {
+    const setInter =  setInterval(() => {
+        let ItemsFound = items.find( item => item.Id === id);
         id++
-        const ItemsFound = items.find( item => item.Id === id);
         if (ItemsFound){
-            const ele = document.getElementById('question').innerHTML = ItemsFound.Question;
+            let ele = document.getElementById('question').innerHTML = ItemsFound.Question;
             console.log(ele);
         };
         setTimeout(()=>{
              document.getElementById('answer').innerHTML = ItemsFound.Reponse;
-        }, 10000)
+        }, 3000)
         document.getElementById('answer').innerHTML = "";
-
-    }, 15000)
-    setInterval(() =>{
-        TimeC--;
-        if(TimeC <= "5"){
-             document.querySelector(".time").innerHTML =`${String(TimeC).padStart(2, "0")}`;
-             if (TimeC === 0){
-        TimeC = 15;
-        }
-    }
-    }, 1000)
-    
+    }, 5000)
 }
+//     setInterval(() =>{
+//         TimeC--;
+//         if(TimeC <= "5"){
+//              document.querySelector(".time").innerHTML =`${String(TimeC).padStart(2, "0")}`;
+//              if (TimeC === 0){
+//         TimeC = 15;
+//         }
+//     }
+//     }, 1000)
+    
+// }
 
 
 // --------------------- Function------------------------
