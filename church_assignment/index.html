@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- owlcarousel -->
+    <link rel="stylesheet" href="./asset/carousel/css/owl.carousel.min.css">
+    <link rel="stylesheet" href="./asset/carousel/css/owl.theme.default.min.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&family=Merriweather:ital,opsz,wght@0,18..144,300..900;1,18..144,300..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <title>Church</title>
+</head>
+
+<body>
+    <header class="bg-[url(./img/1.webp)] h-[100vh] bg-cover bg-center">
+        <nav class="bg-[rgb(0,0,0,0.4)] h-[100vh] ">
+            <ul
+                class="navItem flex justify-center items-center bg-[rgb(0,0,0,0.5)] backdrop-blur-[5px] h-[50px] gap-7 text-[1.1rem] text-white font-[Merriweather] ">
+                <li><a href="#Home" class="hover:text-white/50 transition-all duration-400">Home</a></li>
+                <li><a href="#Event" class="hover:text-white/50 transition-all duration-400">Event</a></li>
+                <li><a href="#Sermons" class="hover:text-white/50 transition-all duration-400">Sermons</a></li>
+                <li><a href="#Gallery" class="hover:text-white/50 transition-all duration-400">Gallery</a></li>
+            </ul>
+            <div class="mt-[30vh]">
+                <h1 class="text-center text-white text-[2rem] font-[Lora]">Grace <span
+                        class="text-amber-500 text-[3rem]">Fellowship</span> Church</h1>
+                <p class="text-center  text-amber-500 font-[Merriweather] text-[1.1rem]">A place of hope, love, and
+                    faith for everyone.</p>
+            </div>
+        </nav>
+    </header>
+    <main>
+        <!-- Event section -->
+        <section id="Event" class="py-16 bg-gray-100">
+            <div class="max-w-6xl mx-auto px-6">
+                <h2 class="text-3xl font-bold text-center text-amber-700 mb-12 font-[Lora]">Upcoming Events</h2>
+                <!-- Event Cards with Image Left and Info Right -->
+                <div class="space-y-8">
+                    <!-- Event 1 -->
+                    <div class="bg-white rounded-xl shadow-md overflow-hidden hover:shadow-xl transition">
+                        <div class="flex flex-col md:flex-row">
+                            <div class="md:w-1/2">
+                                <img src="./img/event2.jpg" alt="Sunday Service" class="w-full h-full object-cover">
+                            </div>
+                            <div class="md:w-1/2 p-8">
+                                <div class="text-sm text-indigo-600 font-semibold">September 15, 2025 • 10:00 AM</div>
+                                <h3 class="mt-2 text-2xl font-bold text-gray-800">Sunday Worship Service</h3>
+                                <p class="mt-4 text-gray-600">Join us for a spirit-filled worship service featuring
+                                    inspiring music, powerful prayer, and an uplifting message from our pastor. Everyone
+                                    is welcome!</p>
+                                <div class="mt-6 flex items-center">
+                                    <svg class="h-5 w-5 text-gray-400" fill="currentColor" viewBox="0 0 20 20">
+                                        <path fill-rule="evenodd"
+                                            d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z"
+                                            clip-rule="evenodd" />
+                                    </svg>
+                                    <span class="ml-2 text-gray-600">Main Sanctuary</span>
+                                </div>
+                                <a href="#"
+                                    class="mt-6 inline-block px-6 py-3 bg-indigo-600 text-white rounded-lg hover:bg-indigo-700 transition">Register
+                                    Now</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Event 2 -->
+                    <div class="bg-white rounded-xl shadow-md overflow-hidden hover:shadow-xl transition">
+                        <div class="flex flex-col md:flex-row">
+                            <div class="md:w-1/2">
+                                <img src="./img/event3.jpg" alt="Bible Study" class="w-full h-full object-cover">
+                            </div>
+                            <div class="md:w-1/2 p-8">
+                                <div class="text-sm text-indigo-600 font-semibold">September 18, 2025 • 7:00 PM</div>
+                                <h3 class="mt-2 text-2xl font-bold text-gray-800">Wednesday Bible Study</h3>
+                                <p class="mt-4 text-gray-600">Dive deep into God's Word with our weekly Bible study.
+                                    This week we'll be exploring the Book of Psalms and its relevance to our daily
+                                    lives.</p>
+                                <div class="mt-6 flex items-center">
+                                    <svg class="h-5 w-5 text-gray-400" fill="currentColor" viewBox="0 0 20 20">
+                                        <path fill-rule="evenodd"
+                                            d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z"
+                                            clip-rule="evenodd" />
+                                    </svg>
+                                    <span class="ml-2 text-gray-600">Fellowship Hall</span>
+                                </div>
+                                <a href="#"
+                                    class="mt-6 inline-block px-6 py-3 bg-indigo-600 text-white rounded-lg hover:bg-indigo-700 transition">Learn
+                                    More</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- sermons -->
+        <section class="bg-gray-50 py-16" id="Sermons">
+            <div class="max-w-6xl mx-auto px-6 lg:px-8 text-center">
+                <!-- Section Header -->
+                <h2 class="text-3xl font-bold text-amber-700">Latest Sermons</h2>
+                <p class="mt-2 text-lg text-gray-600">Grow in faith through the Word of God</p>
+
+                <!-- Sermon Cards -->
+                <div class="owl-carousel mt-10 grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
+
+                    <!-- Sermon 1 -->
+                    <div class="bg-white rounded-xl shadow-md overflow-hidden hover:shadow-xl transition">
+                        <img src="./img/sermon.jpg" alt="Sermon" class="w-full h-48 object-cover">
+                        <div class="p-6 text-left">
+                            <h3 class="text-xl font-semibold text-gray-800">Walking in Faith</h3>
+                            <p class="mt-2 text-gray-600">Discover how to strengthen your walk with Christ through daily
+                                devotion and prayer.</p>
+                            <a href="#" class="mt-4 inline-block text-amber-600 font-amber-medium hover:underline">Watch
+                                Sermon →</a>
+                        </div>
+                    </div>
+
+                    <!-- Sermon 2 -->
+                    <div class="bg-white rounded-xl shadow-md overflow-hidden hover:shadow-xl transition">
+                        <img src="./img/sermons2.jpg" alt="Sermon" class="w-full h-48 object-cover">
+                        <div class="p-6 text-left">
+                            <h3 class="text-xl font-semibold text-gray-800">The Power of Prayer</h3>
+                            <p class="mt-2 text-gray-600">Explore the importance of prayer and how it transforms our
+                                relationship with God.</p>
+                            <a href="#" class="mt-4 inline-block text-amber-600 font-medium hover:underline">Listen Now
+                                →</a>
+                        </div>
+                    </div>
+
+                    <!-- Sermon 3 -->
+                    <div class="bg-white rounded-xl shadow-md overflow-hidden hover:shadow-xl transition">
+                        <img src="./img/sermon3.jpg" alt="Sermon" class="w-full h-48 object-cover">
+                        <div class="p-6 text-left">
+                            <h3 class="text-xl font-semibold text-gray-800">Living with Hope</h3>
+                            <p class="mt-2 text-gray-600">Learn how the promises of God give us strength and hope in
+                                challenging times.</p>
+                            <a href="#" class="mt-4 inline-block text-amber-600 font-medium hover:underline">Read More
+                                →</a>
+                        </div>
+                    </div>
+                    <!-- Sermon 4 -->
+                    <div class="bg-white rounded-xl shadow-md overflow-hidden hover:shadow-xl transition">
+                        <img src="./img/sermon3.jpg" alt="Sermon" class="w-full h-48 object-cover">
+                        <div class="p-6 text-left">
+                            <h3 class="text-xl font-semibold text-gray-800">Living with Hope</h3>
+                            <p class="mt-2 text-gray-600">Learn how the promises of God give us strength and hope in
+                                challenging times.</p>
+                            <a href="#" class="mt-4 inline-block text-amber-600 font-medium hover:underline">Read More
+                                →</a>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+        <!-- Gallery -->
+        <section id="Gallery" class="py-16 bg-white">
+            <div class="max-w-6xl mx-auto px-6">
+                <h2 class="text-3xl font-bold text-center text-amber-700 mb-12 font-[Lora]">Our Gallery</h2>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                    <!-- Gallery Item 1 -->
+                    <div class="relative group overflow-hidden rounded-lg">
+                        <a class="my-image-links" data-gall="gallery01" href="./img/gallery6.jpg"><img
+                                src="./img/gallery6.jpg" alt="Church Worship"
+                                class="w-full h-64 object-cover transform transition-transform duration-500 group-hover:scale-110"></a>
+                    </div>
+                    <!-- Gallery Item 2 -->
+                    <div class="relative group overflow-hidden rounded-lg">
+                        <a class="my-image-links" data-gall="gallery01" href="./img/gallery4.webp"><img
+                                src="./img/gallery4.webp" alt="Church Worship"
+                                class="w-full h-64 object-cover transform transition-transform duration-500 group-hover:scale-110"></a>
+                    </div>
+                    <!-- Gallery Item 3 -->
+                    <div class="relative group overflow-hidden rounded-lg">
+                        <a class="my-image-links" data-gall="gallery01" href="./img/gallery.jpg"><img
+                                src="./img/gallery.jpg" alt="Church Worship"
+                                class="w-full h-64 object-cover transform transition-transform duration-500 group-hover:scale-110"></a>
+                    </div>
+                    <!-- Gallery Item 4 -->
+                    <div class="relative group overflow-hidden rounded-lg">
+                        <a class="my-image-links" data-gall="gallery01" href="./img/gallery1.jpg"><img
+                                src="./img/gallery1.jpg" alt="Church Worship"
+                                class="w-full h-64 object-cover transform transition-transform duration-500 group-hover:scale-110"></a>
+                    </div>
+                    <!-- Gallery Item 5 -->
+                    <div class="relative group overflow-hidden rounded-lg">
+                        <a class="my-image-links" data-gall="gallery01" href="./img/gallery2.webp"><img
+                                src="./img/gallery2.webp" alt="Church Worship"
+                                class="w-full h-64 object-cover transform transition-transform duration-500 group-hover:scale-110"></a>
+                    </div>
+                    <!-- Gallery Item 6 -->
+                    <div class="relative group overflow-hidden rounded-lg">
+                        <a class="my-image-links" data-gall="gallery01" href="./img/gallery3.jpeg"><img
+                                src="./img/gallery3.jpeg" alt="Church Worship"
+                                class="w-full h-64 object-cover transform transition-transform duration-500 group-hover:scale-110"></a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- footer -->
+        <footer class="bg-gray-900 text-white py-12">
+            <div class="max-w-6xl mx-auto px-6">
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                    <!-- Church Info -->
+                    <div>
+                        <h3 class="text-xl font-bold mb-4 text-amber-500 font-[Lora]">Grace Fellowship Church</h3>
+                        <p class="text-gray-400 mb-4">A place of hope, love, and faith for everyone in our community.
+                        </p>
+                        <div class="flex space-x-4">
+                            <a href="#" class="text-gray-400 hover:text-amber-500">
+                                <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+                                    <path
+                                        d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z" />
+                                </svg>
+                            </a>
+                            <a href="#" class="text-gray-400 hover:text-amber-500">
+                                <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+                                    <path
+                                        d="M23.953 4.57a10 10 0 01-2.825.775 4.958 4.958 0 002.163-2.723c-.951.555-2.005.959-3.127 1.184a4.92 4.92 0 00-8.384 4.482C7.69 8.095 4.067 6.13 1.64 3.162a4.822 4.822 0 00-.666 2.475c0 1.71.87 3.213 2.188 4.096a4.904 4.904 0 01-2.228-.616v.06a4.923 4.923 0 003.946 4.827 4.996 4.996 0 01-2.212.085 4.936 4.936 0 004.604 3.417 9.867 9.867 0 01-6.102 2.105c-.39 0-.779-.023-1.17-.067a13.995 13.995 0 007.557 2.209c9.053 0 13.998-7.496 13.998-13.985 0-.21 0-.42-.015-.63A9.935 9.935 0 0024 4.59z" />
+                                </svg>
+                            </a>
+                            <a href="#" class="text-gray-400 hover:text-amber-500">
+                                <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+                                    <path
+                                        d="M12 0C8.74 0 8.333.015 7.053.072 5.775.132 4.905.333 4.14.63c-.789.306-1.459.717-2.126 1.384S.935 3.35.63 4.14C.333 4.905.131 5.775.072 7.053.012 8.333 0 8.74 0 12s.015 3.667.072 4.947c.06 1.277.261 2.148.558 2.913.306.788.717 1.459 1.384 2.126.667.666 1.336 1.079 2.126 1.384.766.296 1.636.499 2.913.558C8.333 23.988 8.74 24 12 24s3.667-.015 4.947-.072c1.277-.06 2.148-.262 2.913-.558.788-.306 1.459-.718 2.126-1.384.666-.667 1.079-1.335 1.384-2.126.296-.765.499-1.636.558-2.913.06-1.28.072-1.687.072-4.947s-.015-3.667-.072-4.947c-.06-1.277-.262-2.149-.558-2.913-.306-.789-.718-1.459-1.384-2.126C21.319 1.347 20.651.935 19.86.63c-.765-.297-1.636-.499-2.913-.558C15.667.012 15.26 0 12 0zm0 2.16c3.203 0 3.585.016 4.85.071 1.17.055 1.805.249 2.227.415.562.217.96.477 1.382.896.419.42.679.819.896 1.381.164.422.36 1.057.413 2.227.057 1.266.07 1.646.07 4.85s-.015 3.585-.074 4.85c-.061 1.17-.256 1.805-.421 2.227-.224.562-.479.96-.899 1.382-.419.419-.824.679-1.38.896-.42.164-1.065.36-2.235.413-1.274.057-1.649.07-4.859.07-3.211 0-3.586-.015-4.859-.074-1.171-.061-1.816-.256-2.236-.421-.569-.224-.96-.479-1.379-.899-.421-.419-.69-.824-.9-1.38-.165-.42-.359-1.065-.42-2.235-.045-1.26-.061-1.649-.061-4.844 0-3.196.016-3.586.061-4.861.061-1.17.255-1.814.42-2.234.21-.57.479-.96.9-1.381.419-.419.81-.689 1.379-.898.42-.166 1.051-.361 2.221-.421 1.275-.045 1.65-.06 4.859-.06l.045.03zm0 3.678c-3.405 0-6.162 2.76-6.162 6.162 0 3.405 2.76 6.162 6.162 6.162 3.405 0 6.162-2.76 6.162-6.162 0-3.405-2.76-6.162-6.162-6.162zM12 16c-2.21 0-4-1.79-4-4s1.79-4 4-4 4 1.79 4 4-1.79 4-4 4zm7.846-10.405c0 .795-.646 1.44-1.44 1.44-.795 0-1.44-.646-1.44-1.44 0-.794.646-1.439 1.44-1.439.793-.001 1.44.645 1.44 1.439z" />
+                                </svg>
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Quick Links -->
+                    <div>
+                        <h3 class="text-xl font-bold mb-4 text-amber-500">Quick Links</h3>
+                        <ul class="space-y-2">
+                            <li><a href="#Home" class="text-gray-400 hover:text-amber-500">Home</a></li>
+                            <li><a href="#Event" class="text-gray-400 hover:text-amber-500">Events</a></li>
+                            <li><a href="#Sermons" class="text-gray-400 hover:text-amber-500">Sermons</a></li>
+                            <li><a href="#Gallery" class="text-gray-400 hover:text-amber-500">Gallery</a></li>
+                        </ul>
+                    </div>
+
+                    <!-- Service Times -->
+                    <div>
+                        <h3 class="text-xl font-bold mb-4 text-amber-500">Service Times</h3>
+                        <ul class="space-y-2 text-gray-400">
+                            <li>Sunday Service: 10:00 AM</li>
+                            <li>Bible Study: Wed 7:00 PM</li>
+                            <li>Youth Group: Fri 6:30 PM</li>
+                            <li>Prayer Meeting: Sat 9:00 AM</li>
+                        </ul>
+                    </div>
+
+                    <!-- Contact Info -->
+                    <div>
+                        <h3 class="text-xl font-bold mb-4 text-amber-500">Contact Us</h3>
+                        <ul class="space-y-2 text-gray-400">
+                            <li class="flex items-center">
+                                <svg class="w-5 h-5 mr-2" fill="currentColor" viewBox="0 0 20 20">
+                                    <path
+                                        d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z" />
+                                </svg>
+                                123 Church Street, City
+                            </li>
+                            <li class="flex items-center">
+                                <svg class="w-5 h-5 mr-2" fill="currentColor" viewBox="0 0 20 20">
+                                    <path
+                                        d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 5V3z" />
+                                </svg>
+                                (555) 123-4567
+                            </li>
+                            <li class="flex items-center">
+                                <svg class="w-5 h-5 mr-2" fill="currentColor" viewBox="0 0 20 20">
+                                    <path d="M2.003 5.884L10 9.882l7.997-3.998A2 2 0 0016 4H4a2 2 0 00-1.997 1.884z" />
+                                    <path d="M18 8.118l-8 4-8-4V14a2 2 0 002 2h12a2 2 0 002-2V8.118z" />
+                                </svg>
+                                info@gracefellowship.church
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Copyright -->
+                <div class="border-t border-gray-800 mt-8 pt-8 text-center text-gray-400">
+                    <p>&copy; 2025 Grace Fellowship Church. All rights reserved.</p>
+                </div>
+            </div>
+        </footer>
+    </main>
+    <!-- tailwind -->
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"
+        integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+    <script src="./asset/carousel/owl.carousel.min.js"></script>
+    <!-- owl carousel -->
+    <script src="church.js" defer></script>
+</body>
+
+</html>
